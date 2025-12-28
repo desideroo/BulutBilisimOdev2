@@ -4,10 +4,10 @@
 Bu proje, yerel ortamda geliştirilen bir **C# Windows Forms** masaüstü uygulamasının, sanallaştırma teknolojileri kullanılarak oluşturulan bir **OpenNebula Özel Bulut (Private Cloud)** altyapısına taşınmasını kapsamaktadır. Proje, "Lift and Shift" yaklaşımı simüle edilerek, uygulamanın Windows tabanlı bir sanal makine (VM) üzerinde bulut ortamında çalıştırılmasını hedefler.
 
 ## 🛠 Kullanılan Teknolojiler
-* **Uygulama:** C# Windows Forms (.NET Framework)
+* **Uygulama:** C# Windows Forms (.NET Framework), Front-End Websitesi (HTML, CSS, JavaScript, Bootstrap)
 * **Sanallaştırma Platformu:** Oracle VirtualBox
 * **Bulut İşletim Sistemi (Host):** Ubuntu Server 22.04 LTS
-* **Bulut Yönetim Paneli:** OpenNebula
+* **Bulut Yönetim Paneli:** OpenNebula, Render.com
 * **Guest İşletim Sistemi:** Windows 10
 * **Sürücüler:** VirtIO (Windows KVM performansı için)
 
