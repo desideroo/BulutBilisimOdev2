@@ -129,7 +129,7 @@ sudo cat /var/lib/one/.one/one_auth
 ### B Planı (Render.com)
 AWS, Google Cloud, Azure ve Digital Ocean üzerinde yapılan denemeler ödeme yöntemi gibi bahsedilen sebeplerden dolayı başarısız olduğundan bu opsiyonlar devre dışı bırakıldı. Açık kaynak olarak kullanılan OpenNebula’da iç içe sanallaştırma sonucunda kurulum kısmına kadar erişilen windows işletim sisteminin diskleri görüntüleyememesi üzerine başka bir bulut servis sağlayıcısının bulunması gerekiyordu. Araştırmalar sonucunda “Render.com” un ücretsiz kullanıma açık olduğu görüldü.
 
-Render.com seçildi fakat C# windows forms uygulaması eklemeye müsait değildi o nedenle başka bir uygulama eklenmesi gerekiyordu. Ben de daha önce deneme amaçlı yapmış olduğum bir front-end projemi önce GitHub’a daha sonra  Render.com’a github repository aracılığıyla ekledim ve web sitesi sunucuya aktarılmış oldu. Ayrıca VirtualBox üzerinden kurulmuş olan Ubuntu üzerinde de dosya indirlerek çalıştırıldı ve sorun olmadığı gözlendi.
+Render.com seçildi fakat C# windows forms uygulaması eklemeye müsait değildi o nedenle başka bir uygulama eklenmesi gerekiyordu. Ben de daha önce deneme amaçlı yapmış olduğum bir front-end projemi önce GitHub’a daha sonra  Render.com’a github repository aracılığıyla ekledim ve web sitesi sunucuya aktarılmış oldu. Ayrıca VirtualBox üzerinden kurulmuş olan Ubuntu üzerinde de dosya indirlerek çalıştırıldı ve sorun olmadığı gözlendi. Websitesiyle ilgili dosyalar bu repositoryde mevcuttur.
 
 -Render.com Web Sitesi Erişim Linki: https://bulutbilisimodev2.onrender.com
 -Video YouTube Linki: 
