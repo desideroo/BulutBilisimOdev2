@@ -134,4 +134,3 @@ Render.com seçildi fakat C# windows forms uygulaması eklemeye müsait değildi
 Websitesiyle ilgili dosyalar bu repositoryde mevcuttur.
 
 -Render.com Web Sitesi Erişim Linki: https://bulutbilisimodev2.onrender.com
--Video YouTube Linki: 
