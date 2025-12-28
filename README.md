@@ -27,7 +27,7 @@ OpenNebula'nın (KVM) Ubuntu sanal makinesi içinde başka sanal makineler çal�
     ```
 3.  Nested Virtualization aktif edilir (Ubuntu sanal makine adı buraya yazılır):
     ```cmd
-    VBoxManage modifyvm "Ubuntu_VM_Adiniz" --nested-hw-virt on
+    VBoxManage modifyvm "OpenNebula_Sunucusu" --nested-hw-virt on
     ```
 
 ### 2. Ubuntu Üzerine OpenNebula Kurulumu
