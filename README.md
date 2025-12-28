@@ -14,18 +14,8 @@ Bu proje, yerel ortamda geliştirilen bir **C# Windows Forms** masaüstü uygula
 ## Uygulama Mimari Şeması
 Sistemin katmanlı mimarisi aşağıda özetlenmiştir:
 
-[ Fiziksel Katman (Host PC) ]
-      |
-      |--- [ Sanallaştırma Katmanı (VirtualBox) ]
-            |
-            |--- [ Bulut Yönetim Nod'u (Ubuntu Linux) ]
-                  |
-                  |--- [ OpenNebula Frontend & KVM Hypervisor ]
-                        |
-                        |--- [ Sanal Makine (Windows 10 Guest) ]
-                              |
-                              |--- [ C# Windows Forms Uygulaması (.exe) ]
-
+[ Fiziksel Katman (Host PC) ] --> [ Sanallaştırma Katmanı (VirtualBox) ] --> [ Bulut Yönetim Nod'u (Ubuntu Linux) ] --> [ OpenNebula Frontend & KVM Hypervisor ] -->  [ Sanal Makine (Windows 10 Guest) ] --> [ C# Windows Forms Uygulaması (.exe) ]
+                                                                                                                                                                   
 ---
 
 ## 🚀 Kurulum ve Yapılandırma Adımları
