@@ -37,3 +37,86 @@ Ubuntu Server başlatıldıktan sonra, gerekli paketlerin yüklenmesi ve OpenNeb
 ```bash
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install -y gnupg wget curl
+```
+
+**OpenNebula Repository Ekleme ve Kurulum (MiniOne veya Repo Yöntemi):**
+Bu projede OpenNebula'nın stabil sürümü kullanılmıştır.
+```bash
+# Repository anahtarının eklenmesi
+wget -q -O- [https://downloads.opennebula.io/repo/repo.key](https://downloads.opennebula.io/repo/repo.key) | sudo apt-key add -
+
+# Repository listesine ekleme (Ubuntu 22.04 için örnek)
+echo "deb [https://downloads.opennebula.io/repo/6.4/Ubuntu/22.04](https://downloads.opennebula.io/repo/6.4/Ubuntu/22.04) stable opennebula" | sudo tee /etc/apt/sources.list.d/opennebula.list
+
+# Paket listesini güncelleme
+sudo apt-get update
+
+# Frontend ve KVM Node paketlerinin kurulumu
+sudo apt-get install -y opennebula opennebula-sunstone opennebula-gate opennebula-flow opennebula-node-kvm
+```
+
+**Servislerin Başlatılması:**
+```bash
+sudo systemctl start opennebula
+sudo systemctl start opennebula-sunstone
+sudo systemctl enable opennebula
+sudo systemctl enable opennebula-sunstone
+```
+
+### 3. SSH ve Erişim Ayarları
+OpenNebula yönetimi ve dosya transferi için SSH servisi aktif edilmiştir.
+```bash
+# SSH Servisinin durumunu kontrol etme ve başlatma
+sudo systemctl status ssh
+sudo systemctl enable --now ssh
+
+# Güvenlik duvarı (UFW) kullanılıyorsa SSH izni verme
+sudo ufw allow ssh
+```
+
+### 4. ISO Dosyalarının Taşınması ve Yetkilendirme (Chown/Chmod)
+Windows 10 kurulumu için gerekli olan .iso dosyaları ve virtio sürücüleri /var/lib/one/ dizini altına taşınmış ve OpenNebula kullanıcısı (oneadmin) için gerekli okuma/yazma izinleri verilmiştir.
+
+Dosyaların Taşınması: (Dosyaların indirildiği dizinden hedef dizine taşıma)
+```bash
+# Downloads klasöründen var klasörüne taşıma
+sudo mv /home/kullaniciadi/Downloads/win10.iso /var/lib/one/
+sudo mv /home/kullaniciadi/Downloads/virtio-win.iso /var/lib/one/
+sudo mv /home/kullaniciadi/Downloads/one-context.iso /var/lib/one/
+```
+
+Kritik Adım: Dosya Sahipliği ve İzinler (Permission): OpenNebula'nın dosyaları görebilmesi için dosyaların sahibi oneadmin yapılmalıdır.
+```bash
+# Sahipliği oneadmin kullanıcısına ve grubuna verme
+sudo chown -R oneadmin:oneadmin /var/lib/one/
+
+# Dosya izinlerini ayarlama (Okuma/Yazma)
+sudo chmod -R 775 /var/lib/one/
+```
+
+### 5. OpenNebula Arayüz (Sunstone) Girişi
+Kurulum tamamlandıktan sonra, oneadmin kullanıcısının şifresi alınarak tarayıcıdan giriş yapılmıştır.
+
+Giriş Bilgilerini Öğrenme:
+```bash
+# oneadmin kullanıcısının otomatik oluşturulan şifresini görüntüleme
+sudo cat /var/lib/one/.one/one_auth
+```
+
+-URL: https://<UBUNTU_IP_ADRESI>:9869
+-Kullanıcı: oneadmin
+-Şifre: (Yukarıdaki komut çıktısındaki şifre)
+
+### 💻 Sanal Makine (VM) Oluşturma Süreci
+1. Images: Yukarıda yetki verilen ISO dosyaları OpenNebula panelinde "Images" bölümüne "OS" ve "CDROM" tiplerinde eklendi.
+
+2. Datablock: 45 GB boyutunda boş bir Datablock imajı oluşturuldu (C: Sürücüsü olarak).
+
+3. Templates: CPU ve RAM kaynakları belirlenerek VM şablonu oluşturuldu. Disk sıralaması:
+
+    -Datablock (Target: vda)
+    -Win10 ISO (Target: hdb)
+    -VirtIO ISO (Target: hdc)
+    -One-Context ISO (Target: hdd)
+
+4. Instantiate: Şablon kullanılarak VM ayağa kaldırıldı.
