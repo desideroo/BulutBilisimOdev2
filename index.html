@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEYBLADE SHOP | Beyblade Satış Sitesi</title>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CUSTOM CSS -->
+    <link rel = "stylesheet" href = "css/style.css">
+
+
+
+</head>
+<body>
+    
+    <header>
+        <div class="nav  fixed-top bg-white">
+            <a href = "#" class = "logo">
+                <img src = "img/beyblade-icon.png" class = "page-icon">
+                <span class = "shop-name">BB SHOP</span>
+            </a>
+            <div class = "header-links">
+                <a href = "/" class = "header-links">Anasayfa</a>
+                <a href = "#shop-container" class = "header-links">Ürünlerimiz</a> 
+                <a href = "#popular" class = "header-links">Yılın Ürünleri</a>   
+                <a href = "#contact" class = "header-links">İletişim</a>
+                <a href = "#newsletter" class = "header-links">Abone Ol</a>
+                <a href = "survey.html" class = "header-links">Anket</a>
+                <a href = "#about" class = "header-links">Hakkımızda</a>
+                <span class = "clock"></span>     
+            </div>
+
+
+
+            <i class = "bx bx-shopping-bag" id = "cart-icon"></i>
+
+            <div class="cart">
+                <h2 class="cart-title">Sepetiniz</h2>
+
+                <div class="cart-content">
+
+                </div>
+
+                <div class="total">
+                    <div class="total-title">Toplam</div>
+                    <div class="total-price">0 TL</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Ad Soyad</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="İsminizi Giriniz">
+                  </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Mail Adresi</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Telefon Numarası</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="+90">
+                  </div> 
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Adres</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+
+
+                <button type = "button" class = "btn-buy">Şimdi Satın Al</button>
+
+                <i class='bx bx-x' id = "close-cart" ></i>
+            </div>
+        </div>
+    </header>
+
+<!-- CAROUSEL BAŞLANGIÇ -->
+  <section id = "header" class="vh-100 carousel slide" data-bs-ride="carousel" style="padding-top: 104px;">
+    <div class="container h-100 d-flex align-items-center carousel-inner">
+      <div class="text-center carousel-item active">
+        <h2 class="text-white">En İyi koleksiyonlar</h2>
+        <h1 class="py-2 fw-bold text-white">%100 ORİJİNAL</h1>
+        <a href="#" class="btn mt-3">HEMEN SATIN AL</a>
+      </div>
+      <div class="text-center carousel-item">
+        <h2 class="text-white">En İyi Fiyatlar & Teklifler</h2>
+        <h1 class="py-2 fw-bold text-white">YENİ SEZON</h1>
+        <a href="#" class="btn mt-3">HEMEN SATIN AL</a>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#header" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#header" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </section>
+  <!-- CAROUSEL BİTİŞ -->
+
+
+  <!-- ÜRÜNLER BAŞLANGIÇ -->
+    <section class = "shop container" id = "shop-container">
+        <h2 class="section-title">Tüm Ürünler</h2>
+        
+        <div class="row g-0">
+            <div class="d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+              <button type="button" class="btn m-2 text-dark active-filter-btn filters" data-filter="*">Hepsi</button>
+              <button type="button" class="btn m-2 text-dark filters" data-filter=".best">En Çok Satanlar</button>
+              <button type="button" class="btn m-2 text-dark filters" data-filter=".feat">Önerilenler</button>
+              <button type="button" class="btn m-2 text-dark filters" data-filter=".new">Yeni Çıkanlar</button>
+            </div>
+        
+        <div class="shop-content">
+
+            <div class="product-box best">
+                <img src = "img/pegasus.png" alt = "" class = "product-img">
+                <h2 class="product-title">COSMIC PEGASUS</h2>
+                <span class = "price">75 TL</span>
+                <i class = "bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box feat">
+                <img src = "img/phoenix-wing.png" alt = "" class = "product-img">
+                <h2 class="product-title">PHOENIX WING</h2>
+                <span class = "price">75 TL</span>
+                <i class = "bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box new">
+                <img src = "img/l-drago.png" alt = "" class = "product-img">
+                <h2 class="product-title">LIGHTNING DRAGO</h2>
+                <span class = "price">75 TL</span>
+                <i class = "bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box new">
+                <img src = "img/ultimate-valkyrie.png" alt = "" class = "product-img">
+                <h2 class="product-title">ULTIMATE VALKYRIE</h2>
+                <span class = "price">75 TL</span>
+                <i class = "bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box best">
+                <img src = "img/dran-sword.png" alt = "" class = "product-img">
+                <h2 class="product-title">DRAN SWORD</h2>
+                <span class = "price">75 TL</span>
+                <i class = "bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box feat">
+                <img src = "img/chaos-oval-gyro.png" alt = "" class = "product-img">
+                <h2 class="product-title">CHAOS OVAL GYRO</h2>
+                <span class = "price">75 TL</span>
+                <i class = "bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box new">
+                <img src = "img/ninja-salamander.png" alt = "" class = "product-img">
+                <h2 class="product-title">NINJA SALAMANDER</h2>
+                <span class = "price">75 TL</span>
+                <i class = "bx bx-shopping-bag add-cart"></i>
+            </div>
+
+            <div class="product-box feat">
+                <img src = "img/emperor-forneus.png" alt = "" class = "product-img">
+                <h2 class="product-title">EMPEROR FORNEUS</h2>
+                <span class = "price">75 TL</span>
+                <i class = "bx bx-shopping-bag add-cart"></i>
+            </div>
+
+        </div>
+    </section>
+  <!-- ÜRÜNLER BİTİŞ -->
+
+  <!-- İNDİRİM BANNER BAŞLANGIÇ -->
+  <section id="offers" class="py-5">
+    <div class="container">
+      <div
+        class="row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
+        <div class="offers-content">
+          <span class="text-dark">%40'a Varan İndirimler</span>
+          <h2 class="mt-2 mb-4 text-dark">Saatlik İndirimleri Kaçırma!</h2>
+          <a href="#" class="btn">Hemen Satın Al</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- İNDİRİM BANNER BİTİŞ -->
+
+  <!-- POPÜLER ÜRÜNLER BAŞLANGIÇ -->
+  <section id="popular" class="py-5">
+    <div class="container">
+      <div class="title text-center pt-3 pb-5">
+        <h2 class="position-relative d-inline-block ms-4">Yılın En Popüler Ürünleri</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 row g-3">
+            <h3 class="fs-5">En Yüksek Oyu Alanlar</h3>
+            <div class="d-flex align-items-start justify-content-start">
+              <img src="img/pegasus.png" alt="" class="img-fluid pe-3 w-25">
+              <div>
+                <p class="mb-0">Cosmic Pegasus</p>
+                <span>75 TL</span>
+              </div>
+            </div>
+  
+            <div class="d-flex align-items-start justify-content-start">
+              <img src="img/phoenix-wing.png" alt="" class="img-fluid pe-3 w-25">
+              <div>
+                <p class="mb-0">Phoenix Wing</p>
+                <span>75 TL</span>
+              </div>
+            </div>
+  
+            <div class="d-flex align-items-start justify-content-start">
+              <img src="img/l-drago.png" alt="" class="img-fluid pe-3 w-25">
+              <div>
+                <p class="mb-0">Lightning Drago</p>
+                <span>75 TL</span>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-md-6 col-lg-4 row g-3">
+          <h3 class="fs-5">En Çok Satanlar</h3>
+          <div class="d-flex align-items-start justify-content-start">
+            <img src="img/pegasus.png" alt="" class="img-fluid pe-3 w-25">
+            <div>
+              <p class="mb-0">Cosmic Pegasus</p>
+              <span>75 TL</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start justify-content-start">
+            <img src="img/phoenix-wing.png" alt="" class="img-fluid pe-3 w-25">
+            <div>
+              <p class="mb-0">Phoenix Wing</p>
+              <span>75 TL</span>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start justify-content-start">
+            <img src="img/l-drago.png" alt="" class="img-fluid pe-3 w-25">
+            <div>
+              <p class="mb-0">Lightning Drago</p>
+              <span>75 TL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 row g-3">
+            <h3 class="fs-5">İndirimdekiler</h3>
+            <div class="d-flex align-items-start justify-content-start">
+              <img src="img/pegasus.png" alt="" class="img-fluid pe-3 w-25">
+              <div>
+                <p class="mb-0">Cosmic Pegasus</p>
+                <span>75 TL</span>
+              </div>
+            </div>
+  
+            <div class="d-flex align-items-start justify-content-start">
+              <img src="img/phoenix-wing.png" alt="" class="img-fluid pe-3 w-25">
+              <div>
+                <p class="mb-0">Phoenix Wing</p>
+                <span>75 TL</span>
+              </div>
+            </div>
+  
+            <div class="d-flex align-items-start justify-content-start">
+              <img src="img/l-drago.png" alt="" class="img-fluid pe-3 w-25">
+              <div>
+                <p class="mb-0">Lightning Drago</p>
+                <span>75 TL</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- POPÜLER ÜRÜNLER BİTİŞ -->
+
+  <!-- HAKKIMIZDA BAŞLANGIÇ -->
+  <section id = "about" class = "py-5">
+    <div class = "container">
+        <div class = "row gy-lg-5 align-items-center">
+            <div class = "col-lg-6 order-lg-1 text-center text-lg-start">
+                <div class = "title pt-3 pb-5">
+                    <h2 class = "position-relative d-inline-block">Hakkımızda</h2>
+                </div>
+                <p class = "">Çocukluğumuzun en sevilen çizgi filmlerinden olan Beyblade ürünlerinin satışlarını yapıyoruz. Ürünlerimiz %100 orijinaldir. Ürün yelpazemizi geliştirmek için çalışmalarımız devam ediyor. Sorunuz veya öneriniz olursa bize ulaşmaktan çekinmeyin.</p>
+                <h2 class = "position-relative d-inline-block mt-2 mb-2">Fotoğraf Linkleri</h2><br>
+                <div class = "mt-4 photo-links">
+                    <a href = "https://beyblade.fandom.com/wiki/Cosmic_Pegasus_F:D">Cosmic Pegasus</a><br>    
+                    <a href = "https://beyblade.fandom.com/wiki/Phoenix_Wing_9-60GF">Phoenix Wing</a><br>
+                    <a href = "https://beyblade.fandom.com/wiki/L-Drago_Destructor_F:S">Lightning Drago</a><br>
+                    <a href = "https://beyblade.fandom.com/wiki/Ultimate_Valkyrie_Legacy_Variable%27-9">Ultimate Valkyrie</a><br>
+                    <a href = "https://beyblade.fandom.com/wiki/Dran_Sword_3-60F">Dran Sword</a><br>
+                    <a href = "https://beyblade.fandom.com/wiki/Chaos_Oval_Gyro">Chaos Oval Gyro</a><br>
+                    <a href = "https://beyblade.fandom.com/wiki/Ninja_Salamander_SW145SD">Ninja Salamander</a><br>
+                    <a href = "https://beyblade.fandom.com/wiki/Emperor_Forneus_7_Zeta">Empreor Forneus</a><br>
+                </div>
+            </div>
+            <div class = "col-lg-6">
+                <img src = "img/banner.jpg" alt = "" class = "img-fluid">
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- HAKKIMIZDA BİTİŞ -->
+
+
+  <!-- BÜLTEN ABONELİĞİ BAŞLANGIÇ -->
+  <section id="newsletter" class="py-5">
+    <div class="container">
+      <div class="d-flex flex-column align-items-center justify-content-center">
+        <div class="title text-center pt-3 pb-5">
+          <h2 class="position-relative d-inline-block ms-4">Bülten Aboneliği</h2>
+        </div>
+
+        <p class="text-center text-muted">En güncel ürün ve kampanyalardan haberdar olmak için abone olmayı unutmayın. </p>
+        <div class="input-group mb-3 mt-3">
+          <input type="text" class="form-control" placeholder="Mail Adresinizi Giriniz ...">
+          <button class="btn btn-primary subscribe" type="submit">Abone Ol</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- BÜLTEN ABONELİĞİ BİTİŞ -->
+
+  <!-- İLETİŞİM -->
+  <section class = "contact" id = "contact">
+    <div class = "container">
+        <div class = "row">
+            <div class = " container col-lg-5 m-auto text-start justify-content-start mb-3">
+                <h1>Bize Ulaşın</h1>
+                <h6 style = "color: red">Bizim İçin Çok Değerlisiniz</h6>
+            </div>
+        </div>
+            <div class = "row">
+                <div class="col-lg-9">
+                    <div class = "row">
+                        <div class = "col-lg-4 me-5">
+                          <h6>ADRES</h6>
+                          <p>
+                            Sakarya Üniversitesi, Serdivan , Sakarya</p> 
+
+                            <h6>TELEFON</h6>
+                            <p>
+                              +90 (530) 543 70 01
+                            </p> 
+                            <h6>E-MAİL</h6>
+                            <p>
+                             info@bbshop.com</p>        
+                    </div>            
+                        <div class = "col-lg-7">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type  ="text" class = "form-control bg-light" placeholder = "Adınız"></input>
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type  ="text" class = "form-control bg-light" placeholder = "Soyadınız"></input>
+                            </div>
+                            </div> 
+                      <div class="row">
+                        <div class="col-lg-12 py-3">
+                            <textarea name="" class = "form-control bg-light" placeholder = "Mesajınızı Giriniz" id="" cols="10" rows="5"></textarea>
+                        </div>
+                      </div> 
+                      <button class = "contact-button">Gönder</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+  </section>
+  <!-- İLETİŞİM -->
+
+  <!-- FOOTER BAŞLANGIÇ -->
+  <footer class="bg-secondary py-5">
+    <div class="container">
+      <div class="row text-white g-4">
+        <div class="col-md-6 col-lg-3">
+          <a class="text-uppercase text-decoration-none brand text-white" href="index.html">Beyblade</a>
+          <p class="text-white text-muted mt-3">Ürünlerimiz %100 orijinaldir. Ürün yelpazemizi geliştirmek için çalışmalarımız devam ediyor. Sorunuz veya öneriniz olursa bize ulaşmaktan çekinmeyin.</p>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5 class="fw-light">Linkler</h5>
+          <ul class="footer-links">
+            <li class="my-3">
+              <a href="#" class="text-white text-decoration-none text-muted">
+                <i class="fas fa-chevron-right me-1"></i>
+                Anasayfa
+              </a>
+            </li>
+            <li class="my-3">
+              <a href="#" class="text-white text-decoration-none text-muted">
+                <i class="fas fa-chevron-right me-1"></i>
+                Özel Koleksiyonlar
+              </a>
+            </li>
+            <li class="my-3">
+              <a href="#" class="text-white text-decoration-none text-muted">
+                <i class="fas fa-chevron-right me-1"></i>
+                Hakkımızda
+              </a>
+            </li>
+            <li class="my-3">
+              <a href="#" class="text-white text-decoration-none text-muted">
+                <i class="fas fa-chevron-right me-1"></i>
+                İletişim
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5 class="fw-light mb-3">Bize Ulaşın</h5>
+          <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+            <span class="me-3">
+                <i class='bx bxs-map' ></i>
+            </span>
+            <span class="fw-light">
+              Sakarya Üniversitesi, Serdivan , Sakarya
+            </span>
+          </div>
+          <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+            <span class="me-3">
+                <i class='bx bxs-envelope' ></i>
+            </span>
+            <span class="fw-light">
+              info@bbshop.com
+            </span>
+          </div>
+          <div class="d-flex justify-content-start align-items-start my-2 text-muted">
+            <span class="me-3">
+                <i class='bx bxs-phone' ></i>
+            </span>
+            <span class="fw-light">
+              +90 (530) 543 70 01 
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <h5 class="fw-light mb-3">Bizi Takip Edin</h5>
+          <div>
+            <ul class="list-unstyled d-flex">
+              <li>
+                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                    <i class='bx bxl-twitter' ></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                    <i class='bx bxl-instagram-alt' ></i>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-white text-decoration-none text-muted fs-4 me-4">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER BİTİŞ -->
+
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script src = "js/main.js"></script>
+</body>
+</html>
